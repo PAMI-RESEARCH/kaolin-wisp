@@ -1,0 +1,255 @@
+2022-09-15 11:11:55,418|    INFO| Position Embed Dim: 63
+2022-09-15 11:11:55,418|    INFO| View Embed Dim: 27
+2022-09-15 11:12:05,528|    INFO| Active Resolutions: [16, 21, 29, 39, 53, 72, 98, 133, 181, 245, 331, 449, 608, 824, 1116, 1512]
+2022-09-15 11:12:05,689|    INFO| Info: 
+```{ 'app': {},
+  'dataset': { 'bg_color': 'white',
+               'dataset_num_workers': -1,
+               'dataset_path': 'data/lego',
+               'dataset_type': 'multiview',
+               'get_normals': False,
+               'mip': 0,
+               'mode_mesh_norm': 'sphere',
+               'multiview_dataset_format': 'standard',
+               'num_rays_sampled_per_img': 4096,
+               'num_samples': 100000,
+               'num_samples_on_mesh': 100000000,
+               'sample_mode': ['rand', 'near', 'near', 'trace', 'trace'],
+               'sample_tex': False,
+               'samples_per_voxel': 256},
+  'embedder': { 'embedder_type': 'positional',
+                'pos_multires': 10,
+                'view_multires': 4},
+  'global': { 'config': 'configs/ngp_nerf_lego_base.yaml',
+              'detect_anomaly': False,
+              'exp_name': 'test_ngp_nerf_lego_base',
+              'perf': False,
+              'trainer_type': 'MultiviewTrainer'},
+  'grid': { 'as_type': 'none',
+            'base_lod': 2,
+            'codebook_bitwidth': 19,
+            'feature_bias': 0.0,
+            'feature_dim': 2,
+            'feature_std': 0.01,
+            'grid_type': 'HashGrid',
+            'interpolation_type': 'linear',
+            'max_grid_res': 2048,
+            'multiscale_type': 'cat',
+            'noise_std': 0.0,
+            'num_lods': 16,
+            'raymarch_type': 'ray',
+            'tree_type': 'geometric'},
+  'net': { 'activation_type': 'relu',
+           'decoder_type': 'basic',
+           'hidden_dim': 128,
+           'layer_type': 'none',
+           'nef_type': 'NeuralRadianceField',
+           'num_layers': 1,
+           'out_dim': 4,
+           'position_input': False,
+           'pretrained': None,
+           'skip': None},
+  'optimizer': { 'grid_lr_weight': 100.0,
+                 'lr': 0.001,
+                 'optimizer_type': 'rmsprop',
+                 'rgb_loss': 1.0,
+                 'weight_decay': 0},
+  'optional arguments': {'help': None, 'log_level': 20},
+  'positional arguments': {},
+  'renderer': { 'ao': False,
+                'camera_clamp': [0, 10],
+                'camera_fov': 30,
+                'camera_lookat': [0, 0, 0],
+                'camera_origin': [-3.0, 0.65, -3.0],
+                'camera_proj': 'persp',
+                'matcap_path': 'data/matcaps/matcap_plastic_yellow.jpg',
+                'min_dis': 0.0003,
+                'num_steps': 512,
+                'render_batch': 4000,
+                'render_res': [1024, 1024],
+                'shading_mode': 'rb',
+                'shadow': False,
+                'step_size': 1.0,
+                'tracer_type': 'PackedRFTracer'},
+  'trainer': { 'batch_size': 1,
+               'epochs': 100,
+               'grow_every': -1,
+               'growth_strategy': 'increase',
+               'log_2d': False,
+               'log_dir': '_results/logs/runs/',
+               'model_format': 'full',
+               'only_last': False,
+               'prune_every': -1,
+               'random_lod': False,
+               'render_every': 10,
+               'resample': False,
+               'resample_every': 1,
+               'save_as_new': False,
+               'save_every': 10},
+  'validation': {'valid_every': 100, 'valid_only': False}}```
+2022-09-15 11:12:05,689|    INFO| Training on data/lego
+2022-09-15 11:12:05,690|    INFO| Total number of parameters: 11732350
+2022-09-15 11:12:05,690|    INFO| Using NVIDIA GeForce RTX 3090 with CUDA v11.3
+2022-09-15 11:12:10,037|    INFO| EPOCH 0/100 | total loss: 6.252E-02 | rgb loss: 6.252E-02
+2022-09-15 11:12:12,246|    INFO| Saving model checkpoint to: _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/model.pth
+2022-09-15 11:12:17,646|    INFO| EPOCH 1/100 | total loss: 4.135E-02 | rgb loss: 4.135E-02
+2022-09-15 11:12:22,028|    INFO| EPOCH 2/100 | total loss: 3.635E-02 | rgb loss: 3.635E-02
+2022-09-15 11:12:26,180|    INFO| EPOCH 3/100 | total loss: 3.360E-02 | rgb loss: 3.360E-02
+2022-09-15 11:12:30,139|    INFO| EPOCH 4/100 | total loss: 3.171E-02 | rgb loss: 3.171E-02
+2022-09-15 11:12:34,129|    INFO| EPOCH 5/100 | total loss: 3.009E-02 | rgb loss: 3.009E-02
+2022-09-15 11:12:38,092|    INFO| EPOCH 6/100 | total loss: 2.849E-02 | rgb loss: 2.849E-02
+2022-09-15 11:12:42,123|    INFO| EPOCH 7/100 | total loss: 2.779E-02 | rgb loss: 2.779E-02
+2022-09-15 11:12:46,318|    INFO| EPOCH 8/100 | total loss: 2.674E-02 | rgb loss: 2.674E-02
+2022-09-15 11:12:50,325|    INFO| EPOCH 9/100 | total loss: 2.628E-02 | rgb loss: 2.628E-02
+2022-09-15 11:12:54,315|    INFO| EPOCH 10/100 | total loss: 2.564E-02 | rgb loss: 2.564E-02
+2022-09-15 11:12:56,429|    INFO| Saving model checkpoint to: _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/model.pth
+2022-09-15 11:13:01,705|    INFO| EPOCH 11/100 | total loss: 2.501E-02 | rgb loss: 2.501E-02
+2022-09-15 11:13:05,670|    INFO| EPOCH 12/100 | total loss: 2.496E-02 | rgb loss: 2.496E-02
+2022-09-15 11:13:09,688|    INFO| EPOCH 13/100 | total loss: 2.427E-02 | rgb loss: 2.427E-02
+2022-09-15 11:13:13,603|    INFO| EPOCH 14/100 | total loss: 2.425E-02 | rgb loss: 2.425E-02
+2022-09-15 11:13:17,492|    INFO| EPOCH 15/100 | total loss: 2.349E-02 | rgb loss: 2.349E-02
+2022-09-15 11:13:21,358|    INFO| EPOCH 16/100 | total loss: 2.340E-02 | rgb loss: 2.340E-02
+2022-09-15 11:13:25,269|    INFO| EPOCH 17/100 | total loss: 2.329E-02 | rgb loss: 2.329E-02
+2022-09-15 11:13:29,284|    INFO| EPOCH 18/100 | total loss: 2.299E-02 | rgb loss: 2.299E-02
+2022-09-15 11:13:33,220|    INFO| EPOCH 19/100 | total loss: 2.270E-02 | rgb loss: 2.270E-02
+2022-09-15 11:13:37,265|    INFO| EPOCH 20/100 | total loss: 2.246E-02 | rgb loss: 2.246E-02
+2022-09-15 11:13:39,347|    INFO| Saving model checkpoint to: _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/model.pth
+2022-09-15 11:13:44,504|    INFO| EPOCH 21/100 | total loss: 2.247E-02 | rgb loss: 2.247E-02
+2022-09-15 11:13:48,610|    INFO| EPOCH 22/100 | total loss: 2.235E-02 | rgb loss: 2.235E-02
+2022-09-15 11:13:52,598|    INFO| EPOCH 23/100 | total loss: 2.209E-02 | rgb loss: 2.209E-02
+2022-09-15 11:13:56,464|    INFO| EPOCH 24/100 | total loss: 2.159E-02 | rgb loss: 2.159E-02
+2022-09-15 11:14:00,478|    INFO| EPOCH 25/100 | total loss: 2.167E-02 | rgb loss: 2.167E-02
+2022-09-15 11:14:04,416|    INFO| EPOCH 26/100 | total loss: 2.130E-02 | rgb loss: 2.130E-02
+2022-09-15 11:14:08,511|    INFO| EPOCH 27/100 | total loss: 2.105E-02 | rgb loss: 2.105E-02
+2022-09-15 11:14:12,440|    INFO| EPOCH 28/100 | total loss: 2.110E-02 | rgb loss: 2.110E-02
+2022-09-15 11:14:16,344|    INFO| EPOCH 29/100 | total loss: 2.086E-02 | rgb loss: 2.086E-02
+2022-09-15 11:14:20,293|    INFO| EPOCH 30/100 | total loss: 2.054E-02 | rgb loss: 2.054E-02
+2022-09-15 11:14:22,413|    INFO| Saving model checkpoint to: _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/model.pth
+2022-09-15 11:14:27,797|    INFO| EPOCH 31/100 | total loss: 2.044E-02 | rgb loss: 2.044E-02
+2022-09-15 11:14:31,721|    INFO| EPOCH 32/100 | total loss: 2.050E-02 | rgb loss: 2.050E-02
+2022-09-15 11:14:35,799|    INFO| EPOCH 33/100 | total loss: 2.033E-02 | rgb loss: 2.033E-02
+2022-09-15 11:14:39,813|    INFO| EPOCH 34/100 | total loss: 1.991E-02 | rgb loss: 1.991E-02
+2022-09-15 11:14:43,689|    INFO| EPOCH 35/100 | total loss: 1.980E-02 | rgb loss: 1.980E-02
+2022-09-15 11:14:47,779|    INFO| EPOCH 36/100 | total loss: 1.971E-02 | rgb loss: 1.971E-02
+2022-09-15 11:14:51,849|    INFO| EPOCH 37/100 | total loss: 1.939E-02 | rgb loss: 1.939E-02
+2022-09-15 11:14:55,890|    INFO| EPOCH 38/100 | total loss: 1.958E-02 | rgb loss: 1.958E-02
+2022-09-15 11:14:59,839|    INFO| EPOCH 39/100 | total loss: 1.951E-02 | rgb loss: 1.951E-02
+2022-09-15 11:15:03,876|    INFO| EPOCH 40/100 | total loss: 1.916E-02 | rgb loss: 1.916E-02
+2022-09-15 11:15:05,982|    INFO| Saving model checkpoint to: _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/model.pth
+2022-09-15 11:15:11,270|    INFO| EPOCH 41/100 | total loss: 1.932E-02 | rgb loss: 1.932E-02
+2022-09-15 11:15:15,185|    INFO| EPOCH 42/100 | total loss: 1.924E-02 | rgb loss: 1.924E-02
+2022-09-15 11:15:19,070|    INFO| EPOCH 43/100 | total loss: 1.893E-02 | rgb loss: 1.893E-02
+2022-09-15 11:15:22,968|    INFO| EPOCH 44/100 | total loss: 1.872E-02 | rgb loss: 1.872E-02
+2022-09-15 11:15:26,934|    INFO| EPOCH 45/100 | total loss: 1.885E-02 | rgb loss: 1.885E-02
+2022-09-15 11:15:30,887|    INFO| EPOCH 46/100 | total loss: 1.865E-02 | rgb loss: 1.865E-02
+2022-09-15 11:15:34,878|    INFO| EPOCH 47/100 | total loss: 1.850E-02 | rgb loss: 1.850E-02
+2022-09-15 11:15:38,961|    INFO| EPOCH 48/100 | total loss: 1.832E-02 | rgb loss: 1.832E-02
+2022-09-15 11:15:42,903|    INFO| EPOCH 49/100 | total loss: 1.834E-02 | rgb loss: 1.834E-02
+2022-09-15 11:15:46,805|    INFO| EPOCH 50/100 | total loss: 1.814E-02 | rgb loss: 1.814E-02
+2022-09-15 11:15:48,884|    INFO| Saving model checkpoint to: _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/model.pth
+2022-09-15 11:15:54,045|    INFO| EPOCH 51/100 | total loss: 1.801E-02 | rgb loss: 1.801E-02
+2022-09-15 11:15:58,105|    INFO| EPOCH 52/100 | total loss: 1.811E-02 | rgb loss: 1.811E-02
+2022-09-15 11:16:02,121|    INFO| EPOCH 53/100 | total loss: 1.777E-02 | rgb loss: 1.777E-02
+2022-09-15 11:16:06,158|    INFO| EPOCH 54/100 | total loss: 1.783E-02 | rgb loss: 1.783E-02
+2022-09-15 11:16:10,091|    INFO| EPOCH 55/100 | total loss: 1.768E-02 | rgb loss: 1.768E-02
+2022-09-15 11:16:13,903|    INFO| EPOCH 56/100 | total loss: 1.773E-02 | rgb loss: 1.773E-02
+2022-09-15 11:16:17,844|    INFO| EPOCH 57/100 | total loss: 1.762E-02 | rgb loss: 1.762E-02
+2022-09-15 11:16:21,716|    INFO| EPOCH 58/100 | total loss: 1.762E-02 | rgb loss: 1.762E-02
+2022-09-15 11:16:25,702|    INFO| EPOCH 59/100 | total loss: 1.765E-02 | rgb loss: 1.765E-02
+2022-09-15 11:16:29,635|    INFO| EPOCH 60/100 | total loss: 1.743E-02 | rgb loss: 1.743E-02
+2022-09-15 11:16:31,700|    INFO| Saving model checkpoint to: _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/model.pth
+2022-09-15 11:16:36,892|    INFO| EPOCH 61/100 | total loss: 1.753E-02 | rgb loss: 1.753E-02
+2022-09-15 11:16:40,800|    INFO| EPOCH 62/100 | total loss: 1.735E-02 | rgb loss: 1.735E-02
+2022-09-15 11:16:44,669|    INFO| EPOCH 63/100 | total loss: 1.720E-02 | rgb loss: 1.720E-02
+2022-09-15 11:16:48,852|    INFO| EPOCH 64/100 | total loss: 1.710E-02 | rgb loss: 1.710E-02
+2022-09-15 11:16:52,984|    INFO| EPOCH 65/100 | total loss: 1.728E-02 | rgb loss: 1.728E-02
+2022-09-15 11:16:57,019|    INFO| EPOCH 66/100 | total loss: 1.713E-02 | rgb loss: 1.713E-02
+2022-09-15 11:17:01,273|    INFO| EPOCH 67/100 | total loss: 1.684E-02 | rgb loss: 1.684E-02
+2022-09-15 11:17:05,377|    INFO| EPOCH 68/100 | total loss: 1.689E-02 | rgb loss: 1.689E-02
+2022-09-15 11:17:09,375|    INFO| EPOCH 69/100 | total loss: 1.682E-02 | rgb loss: 1.682E-02
+2022-09-15 11:17:13,305|    INFO| EPOCH 70/100 | total loss: 1.673E-02 | rgb loss: 1.673E-02
+2022-09-15 11:17:15,346|    INFO| Saving model checkpoint to: _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/model.pth
+2022-09-15 11:17:20,592|    INFO| EPOCH 71/100 | total loss: 1.698E-02 | rgb loss: 1.698E-02
+2022-09-15 11:17:24,665|    INFO| EPOCH 72/100 | total loss: 1.663E-02 | rgb loss: 1.663E-02
+2022-09-15 11:17:28,748|    INFO| EPOCH 73/100 | total loss: 1.665E-02 | rgb loss: 1.665E-02
+2022-09-15 11:17:32,752|    INFO| EPOCH 74/100 | total loss: 1.664E-02 | rgb loss: 1.664E-02
+2022-09-15 11:17:36,889|    INFO| EPOCH 75/100 | total loss: 1.641E-02 | rgb loss: 1.641E-02
+2022-09-15 11:17:40,866|    INFO| EPOCH 76/100 | total loss: 1.651E-02 | rgb loss: 1.651E-02
+2022-09-15 11:17:44,751|    INFO| EPOCH 77/100 | total loss: 1.648E-02 | rgb loss: 1.648E-02
+2022-09-15 11:17:48,723|    INFO| EPOCH 78/100 | total loss: 1.634E-02 | rgb loss: 1.634E-02
+2022-09-15 11:17:52,683|    INFO| EPOCH 79/100 | total loss: 1.646E-02 | rgb loss: 1.646E-02
+2022-09-15 11:17:56,523|    INFO| EPOCH 80/100 | total loss: 1.640E-02 | rgb loss: 1.640E-02
+2022-09-15 11:17:58,568|    INFO| Saving model checkpoint to: _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/model.pth
+2022-09-15 11:18:03,763|    INFO| EPOCH 81/100 | total loss: 1.630E-02 | rgb loss: 1.630E-02
+2022-09-15 11:18:07,642|    INFO| EPOCH 82/100 | total loss: 1.624E-02 | rgb loss: 1.624E-02
+2022-09-15 11:18:11,642|    INFO| EPOCH 83/100 | total loss: 1.619E-02 | rgb loss: 1.619E-02
+2022-09-15 11:18:15,596|    INFO| EPOCH 84/100 | total loss: 1.612E-02 | rgb loss: 1.612E-02
+2022-09-15 11:18:19,524|    INFO| EPOCH 85/100 | total loss: 1.604E-02 | rgb loss: 1.604E-02
+2022-09-15 11:18:23,492|    INFO| EPOCH 86/100 | total loss: 1.593E-02 | rgb loss: 1.593E-02
+2022-09-15 11:18:27,628|    INFO| EPOCH 87/100 | total loss: 1.605E-02 | rgb loss: 1.605E-02
+2022-09-15 11:18:31,548|    INFO| EPOCH 88/100 | total loss: 1.587E-02 | rgb loss: 1.587E-02
+2022-09-15 11:18:35,304|    INFO| EPOCH 89/100 | total loss: 1.571E-02 | rgb loss: 1.571E-02
+2022-09-15 11:18:39,242|    INFO| EPOCH 90/100 | total loss: 1.590E-02 | rgb loss: 1.590E-02
+2022-09-15 11:18:41,310|    INFO| Saving model checkpoint to: _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/model.pth
+2022-09-15 11:18:46,452|    INFO| EPOCH 91/100 | total loss: 1.586E-02 | rgb loss: 1.586E-02
+2022-09-15 11:18:50,586|    INFO| EPOCH 92/100 | total loss: 1.582E-02 | rgb loss: 1.582E-02
+2022-09-15 11:18:54,506|    INFO| EPOCH 93/100 | total loss: 1.587E-02 | rgb loss: 1.587E-02
+2022-09-15 11:18:58,420|    INFO| EPOCH 94/100 | total loss: 1.558E-02 | rgb loss: 1.558E-02
+2022-09-15 11:19:02,331|    INFO| EPOCH 95/100 | total loss: 1.566E-02 | rgb loss: 1.566E-02
+2022-09-15 11:19:06,193|    INFO| EPOCH 96/100 | total loss: 1.549E-02 | rgb loss: 1.549E-02
+2022-09-15 11:19:10,079|    INFO| EPOCH 97/100 | total loss: 1.557E-02 | rgb loss: 1.557E-02
+2022-09-15 11:19:13,932|    INFO| EPOCH 98/100 | total loss: 1.542E-02 | rgb loss: 1.542E-02
+2022-09-15 11:19:17,853|    INFO| EPOCH 99/100 | total loss: 1.551E-02 | rgb loss: 1.551E-02
+2022-09-15 11:19:21,742|    INFO| EPOCH 100/100 | total loss: 1.533E-02 | rgb loss: 1.533E-02
+2022-09-15 11:19:23,802|    INFO| Saving model checkpoint to: _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/model.pth
+2022-09-15 11:19:25,027|    INFO| Beginning validation...
+2022-09-15 11:19:33,171|    INFO| Loaded validation dataset with 100 images at resolution 800x800
+2022-09-15 11:19:33,171|    INFO| Saving validation result to _results/logs/runs/test_ngp_nerf_lego_base/20220915-111205/val
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:21:39,764|    INFO| EPOCH 100/100 | lod15 PSNR: 24.83 | lod15 SSIM: 0.900355 | lod15 LPIPS: 0.162286
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:23:43,538|    INFO| EPOCH 100/100 | lod14 PSNR: 24.83 | lod14 SSIM: 0.900315 | lod14 LPIPS: 0.162200
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:25:58,408|    INFO| EPOCH 100/100 | lod13 PSNR: 24.83 | lod13 SSIM: 0.900315 | lod13 LPIPS: 0.162160
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:28:20,010|    INFO| EPOCH 100/100 | lod12 PSNR: 24.83 | lod12 SSIM: 0.900316 | lod12 LPIPS: 0.162198
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:30:47,882|    INFO| EPOCH 100/100 | lod11 PSNR: 24.83 | lod11 SSIM: 0.900347 | lod11 LPIPS: 0.162190
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:33:24,959|    INFO| EPOCH 100/100 | lod10 PSNR: 24.83 | lod10 SSIM: 0.900358 | lod10 LPIPS: 0.162240
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:35:41,877|    INFO| EPOCH 100/100 | lod9 PSNR: 24.83 | lod9 SSIM: 0.900302 | lod9 LPIPS: 0.162245
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:38:05,805|    INFO| EPOCH 100/100 | lod8 PSNR: 24.83 | lod8 SSIM: 0.900341 | lod8 LPIPS: 0.162194
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:40:41,944|    INFO| EPOCH 100/100 | lod7 PSNR: 24.83 | lod7 SSIM: 0.900309 | lod7 LPIPS: 0.162188
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:43:37,723|    INFO| EPOCH 100/100 | lod6 PSNR: 24.83 | lod6 SSIM: 0.900334 | lod6 LPIPS: 0.162293
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:46:18,819|    INFO| EPOCH 100/100 | lod5 PSNR: 24.83 | lod5 SSIM: 0.900309 | lod5 LPIPS: 0.162214
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:48:56,478|    INFO| EPOCH 100/100 | lod4 PSNR: 24.83 | lod4 SSIM: 0.900362 | lod4 LPIPS: 0.162204
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:51:17,156|    INFO| EPOCH 100/100 | lod3 PSNR: 24.83 | lod3 SSIM: 0.900326 | lod3 LPIPS: 0.162187
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:53:38,258|    INFO| EPOCH 100/100 | lod2 PSNR: 24.83 | lod2 SSIM: 0.900300 | lod2 LPIPS: 0.162135
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:56:03,488|    INFO| EPOCH 100/100 | lod1 PSNR: 24.83 | lod1 SSIM: 0.900363 | lod1 LPIPS: 0.162056
+Setting up [LPIPS] perceptual loss: trunk [vgg], v[0.1], spatial [off]
+Loading model from: /remote-home/zmc/anaconda3/envs/wisp/lib/python3.8/site-packages/lpips/weights/v0.1/vgg.pth
+2022-09-15 11:58:48,261|    INFO| EPOCH 100/100 | lod0 PSNR: 24.83 | lod0 SSIM: 0.900302 | lod0 LPIPS: 0.162261
