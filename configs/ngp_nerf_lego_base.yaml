@@ -12,7 +12,7 @@
 # 27.8 PSNR 0.9295 SSIM 0.0988 LPIPS at the final validation
 
 global:
-    exp_name: 'test_ngp_nerf_lego_base'
+    exp_name: 'exp01_test_ngp_nerf_lego_base'
 
 optimizer:
     optimizer_type: 'rmsprop'
