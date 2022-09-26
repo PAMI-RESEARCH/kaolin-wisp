@@ -50,7 +50,7 @@ def parse_options(return_parser=False):
                               help='Use high-level profiling for the trainer.')
     global_group.add_argument('--detect-anomaly', action='store_true',
                               help='Turn on anomaly detection.')
-    global_group.add_argument('--config', type=str,
+    global_group.add_argument('--config', type=str, default='kaolin-wisp/configs/ngp_nerf_debug.yaml',
                               help='Path to config file to replace defaults.')
 
     ###################
